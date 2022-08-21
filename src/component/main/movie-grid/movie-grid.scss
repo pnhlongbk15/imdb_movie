@@ -1,0 +1,14 @@
+@use "../../../sass/" as *;
+
+.movie-grid {
+    
+    &__display {
+        @include grid();
+        place-items: stretch;
+        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+        gap: 40px 20px;
+    }
+    &__loadmore {
+        text-align: center;
+    }
+}

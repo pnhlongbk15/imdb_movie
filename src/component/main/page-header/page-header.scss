@@ -1,0 +1,20 @@
+@use "../../../sass/" as *;
+
+.page-header {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: $header-height;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: $header-height;
+        background-image: linear-gradient(to top, $black, #0000000e);
+    }
+}

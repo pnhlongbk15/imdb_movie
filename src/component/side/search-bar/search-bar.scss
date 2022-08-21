@@ -1,0 +1,12 @@
+@use "../../../sass/" as *;
+
+.search-bar{
+    @include flex(flex-start,center,10px);
+    input {
+        padding: 5px 20px;
+        border-radius: $border-radius;
+        border: none;
+        width: 30%;
+    }
+
+}

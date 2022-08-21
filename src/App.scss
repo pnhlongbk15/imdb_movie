@@ -1,0 +1,94 @@
+@use "./sass/" as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 12px;
+}
+
+body {
+  font-size: 100%;
+  font-family: $font-family;
+  background-color: $main-color;
+  color: $text-color;
+  font-weight: 400;
+  line-height: 1.4;
+
+  @include tablet {
+    font-size: 80%;
+  }
+  @include mobile {
+    font-size: 60%;
+  }
+}
+//GLOBAL VARIABLES
+a {
+  text-decoration: none;
+  color: unset;
+}
+button {
+  font-family: $font-family;
+}
+
+@media (hover:hover) {
+  button {
+    cursor: pointer;
+  }
+  a:hover {
+    color: $secondary-color;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+button,
+input {
+  outline: none;
+}
+iframe {
+  border: 0;
+}
+.mb-10 {
+  margin-bottom: 10rem;
+}
+.mb-5{
+  margin-bottom: 5rem;
+}
+.mb-3 {
+  margin-bottom: 3rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+// class
+.container {
+  max-width: 100vw;
+  padding: 0 3rem;
+}
+
+.section__header {
+  @include flex(space-between,center);
+}
+
+.small-title {
+  letter-spacing: $letter-spacing;
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  font-weight: 500;
+}

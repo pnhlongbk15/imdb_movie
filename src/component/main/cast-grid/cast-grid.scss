@@ -1,0 +1,33 @@
+@use '../../../sass/' as *;
+
+.cast-grid {
+    @include grid();
+    place-items: unset;
+    gap: 50px 20px;
+    grid-template-columns: repeat(auto-fill, minmax(170px,1fr));
+
+    &__card {
+        box-shadow: 0 0 10px 7px rgba($color: white, $alpha: 0.1);
+        &__content {
+            @include flex(unset,center,10px,column);
+            &__poster {
+                width: 100%;
+                padding-top: 120%;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            &__name {
+                font-size:1.2rem;
+                font-weight: 700;
+                letter-spacing: $letter-spacing;
+            }
+            
+        }
+    }
+    
+}
+.load-more {
+    text-align: center;
+}

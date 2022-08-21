@@ -1,0 +1,8 @@
+@use '../../sass/' as *;
+
+.detail-person {
+    @include grid();
+    place-items: unset;
+    grid-template-columns: 1fr 2.5fr;
+    gap: 50px;
+}

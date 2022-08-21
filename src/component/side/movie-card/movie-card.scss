@@ -1,0 +1,43 @@
+@use "../../../sass/" as *;
+
+.movie-card {
+    @include flex(center,center,20px,column);
+
+    &__poster {
+        width: 100%;
+        position: relative;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-bottom: 150%;
+        border-radius: $border-radius;
+        overflow: hidden;
+
+        &:hover::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba($color: white, $alpha: 0.2);
+        }
+        .btn {
+            position: absolute;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            z-index: 1;
+            box-shadow: unset;
+            &:hover i {
+                color: $secondary-color;
+            }
+        }
+    }
+
+    &__content {
+        font-size: 1.5rem;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+}

@@ -1,0 +1,41 @@
+@use "../../../sass/" as *;
+
+
+.btn {
+    font-size: 1.5rem;
+    color: $text-color;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: $border-btn-radius;
+    background-color: $main-color;
+    box-shadow: 0 0 10px 4px $secondary-color;
+    transition: all 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 0 3px 4px $main-color ,0 0 15px 8px $secondary-color;
+    }
+}
+
+.outline-btn {
+    background-color: transparent;
+    box-shadow: none;
+    border: 3px solid $secondary-color;
+
+    &:hover {
+        color: $secondary-color;
+        background-color: white;
+        box-shadow: 0 0 10px 2px white;
+    }
+}
+
+.small {
+    border: 1.5px solid $secondary-color;
+    font-size: 1rem;
+    padding: 5px 10px;
+    &:hover {
+        box-shadow: none;
+    }
+}
+

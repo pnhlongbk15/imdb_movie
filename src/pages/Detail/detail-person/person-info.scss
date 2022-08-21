@@ -1,0 +1,9 @@
+@use '../../../sass/' as *;
+
+.detail-person__info {
+    &__poster {
+        img {
+            border-radius: $border-radius*3;
+        }
+    }
+}

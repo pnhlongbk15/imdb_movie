@@ -1,0 +1,14 @@
+@use '../../../sass/' as *;
+
+.detail-person__story {
+    letter-spacing: $letter-spacing;
+    &__name {
+        font-size: $font-size-title;
+        font-weight: 900;
+    }
+    &__biography {
+        p {
+            font-weight: 300;
+        }
+    }
+}

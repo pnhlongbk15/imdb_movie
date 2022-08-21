@@ -1,0 +1,98 @@
+@use "../../sass/" as *;
+
+.movie-detail {
+    &__banner {
+        height: 50vh;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            @include overlay();
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 70%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-image: linear-gradient(to top, $black, rgba($color: $black, $alpha: 0));
+        }
+    }
+
+    &__content {
+        @include flex(flex-start, center, 5rem);
+        position: relative;
+        margin-top: -150px;
+        height: 70vh;
+
+        &__poster {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 20vw;
+            height: 100%;
+            border-radius: $border-radius*3;
+        }
+        &__info {
+            flex: 1;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            height: 100%;
+            padding-right: 15%;
+            & > * {
+                margin-bottom: 1.5rem;
+            }
+            .title {
+                font-size: $font-size-title;
+            }
+            .genres {
+                @include flex(flex-start,center,10px);
+                .small {
+                    background-color: $black;
+                }
+            }
+            .overview {
+                display: -webkit-box;
+                overflow: hidden;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+            }
+            .cast {
+                margin-top: 3rem;
+                & > p{
+                    font-size: 2rem;
+                    font-weight: 900;
+                }
+
+                &__info {
+                    float: left;
+                    width: 15%;
+                    margin-right: 15px;
+                    img {
+                        border-radius: $border-radius;
+                    }
+                    .cast-name {
+                        text-align: center;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow:ellipsis;
+                    }
+                }
+            }
+
+        }
+       
+    }
+    &__similar {
+        font-size: $font-size-title;
+        letter-spacing: $letter-spacing;
+    }
+}

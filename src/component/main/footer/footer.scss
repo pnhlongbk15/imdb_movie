@@ -1,0 +1,25 @@
+@use "../../../sass/" as *;
+
+.footer {
+    margin-bottom: 5rem;
+    &__content {
+        @include flex(center,center,20px,column);
+        &__logo {
+            font-size: 2rem;
+
+            & > * ~ * {
+                margin-left: 20px ;
+            }
+        }
+
+        &__menus {
+            font-size: 1.2rem;
+            text-transform: capitalize;
+            @include flex(center,center,10px,column)
+        }
+
+        &__menu {
+            @include flex(unset,unset,20px)
+        }
+    }
+}
